@@ -15,7 +15,9 @@ class Input extends Component {
       <input
         className='autocomplete-input'
         placeholder='Search for names...'
-        onChange={this.handleChange.bind(this)}
+        onChange={ this.handleChange.bind(this) }
+        onBlur={ this.props.onBlur.bind(this) }
+        onFocus={ this.props.onFocus.bind(this) }
         autoFocus
       />
     );
