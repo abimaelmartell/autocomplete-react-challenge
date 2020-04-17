@@ -4,7 +4,9 @@ class Input extends Component {
   handleChange(event) {
     const value = event.target.value;
 
-    this.props.onChange(value);
+    const escaped = value.replace(/[\W_]+/g,"");
+
+    this.props.onChange(escaped);
   }
 
   render() {
